@@ -15,13 +15,13 @@ public class MoneyTest {
     @Test
     void dollarMultiplicationTest() {
         Dollar five = Money.dollar(5);
-        assertEquals(new Dollar(10), five.times(2));
+        assertEquals(Money.dollar(10), five.times(2));
     }
 
     @Test
     void dollarEqualityTest() {
-        assertEquals(new Dollar(5), new Dollar(5));
-        assertNotEquals(new Dollar(5), new Dollar(6));
-        assertNotEquals(new Franc(5), new Dollar(5));
+        assertEquals(Money.dollar(5), Money.dollar(5));
+        assertNotEquals(Money.dollar(5), Money.dollar(6));
+        assertNotEquals(Money.franc(5), Money.dollar(5));
     }
 }
