@@ -1,17 +1,11 @@
 package me.rubaiya;
 
 public class Dollar extends Money {
-
-    public Dollar(int amount) {
-        this.amount = amount;
-    }
-
-    @Override
-    protected String currency() {
-        return "USD";
+    public Dollar(int amount, String currency) {
+        super(amount, currency);
     }
 
     public Money times(int multipliers) {
-        return new Dollar(amount * multipliers);
+        return Money.dollar(amount * multipliers);
     }
 }
